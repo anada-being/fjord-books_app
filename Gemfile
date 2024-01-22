@@ -62,3 +62,4 @@ gem 'carrierwave'
 
 gem 'i18n_generators'
 gem 'wdm', '>= 0.1.0'
+gem 'rails-i18n'
