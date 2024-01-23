@@ -1,5 +1,6 @@
 ---
 en:
+  BooksApp: BooksApp
   notice:
     create: Book was successfully created.
     update: Book was successfully updated.
