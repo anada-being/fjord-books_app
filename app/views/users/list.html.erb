@@ -1,0 +1,24 @@
+<h2><%= t('views.common.Users') %></h2>
+<hr />
+
+<table>
+  <thead>
+    <tr>
+      <th>e-mail</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @users.each do |user| %>
+      <tr>
+        <td><%= user.email %></td>
+        <% if user == current_user %>
+        <td><%= link_to t('views.common.show'), users_show_path %></td>
+        <% end %>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<%= paginate @users %>

@@ -1,0 +1,23 @@
+<h2>プロフィール</h2>
+
+<p>
+  <strong><%= User.human_attribute_name(:email) %>:</strong>
+  <%= current_user.email %>
+</p>
+
+<p>
+  <strong><%= User.human_attribute_name(:postal_code) %>:</strong>
+  <%= current_user.postal_code %>
+</p>
+
+<p>
+  <strong><%= User.human_attribute_name(:address) %>:</strong>
+  <%= current_user.address %>
+</p>
+
+<p>
+  <strong><%= User.human_attribute_name(:profile) %>:</strong>
+  <%= current_user.profile %>
+</p>
+
+<%= link_to t('views.common.edit'), users_edit_path %>

@@ -206,7 +206,10 @@ ja:
       short: "%m/%d %H:%M"
     pm: 午後
   views:
+    books:
+      show: 本一覧
     common:
+      Are you sure?: データが完全に消去されますが、よろしいですか？
       show: 詳細
       edit: 編集
       destroy: 削除
@@ -215,6 +218,21 @@ ja:
       delete_confirm: よろしいですか？
       title_new: "%{name}の新規作成"
       title_edit: "%{name}の編集"
+      Sign up: "サインアップ"
+      Log in: ログイン
+      Users: ユーザー一覧
+    devise:
+      Cancel my account: アカウントの削除
+      Change your password: パスワードの再設定
+      Change my password: パスワードの変更
+      characters minimum: 文字以上で入力してください
+      Confirm new password: 再度パスワードを入力してください
+      Forgot your password?: パスワードを忘れましたか？
+      leave blank if you don't want to change it: 変更しない場合は空白のままにしてください
+      New password: 新規パスワード
+      Send me reset password instructions: パスワードの再設定を行うメールを送ります
+      Unhappy?: ご利用ありがとうございました。
+      we need your current password to confirm your changes: 全ての変更には現在のパスワードが必要です
     pagination:
       first: '最初'
       last: '最後'
