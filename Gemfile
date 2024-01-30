@@ -53,7 +53,7 @@ group :test do
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
-gem 'tzinfo-data'
+gem 'tzinfo-data', platforms: %i[mingw mswin x64_mingw jruby]
 
 gem 'net-imap'
 gem 'net-pop'
@@ -61,4 +61,3 @@ gem 'net-smtp'
 
 gem 'carrierwave'
 gem 'kaminari'
-gem 'wdm', '>= 0.1.0' if Gem.win_platform?
