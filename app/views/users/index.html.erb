@@ -13,9 +13,7 @@
     <% @users.each do |user| %>
       <tr>
         <td><%= user.email %></td>
-        <% if user == current_user %>
-        <td><%= link_to t('views.common.show'), users_show_path %></td>
-        <% end %>
+        <td><%= link_to t('views.common.show'), user_path(user[:id]) %></td>
       </tr>
     <% end %>
   </tbody>

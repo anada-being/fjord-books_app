@@ -3,12 +3,16 @@
 class UsersController < ApplicationController
   before_action :configure_permitted_parameters, if: :devise_controller?
 
-  def list
+  def index
     @users = User.order(:id).page(params[:page])
-    @users = @users.page(params[:page])
+    @users = @users.page
+  end
+
+  def show
+    @user = User.find(params[:id])
   end
 
   def user_params
-    params.require(:user).permit(:show, keys: %i[email postal_code address profile])
+    params.require(:user).permit(keys: %i[email postal_code address profile])
   end
 end
