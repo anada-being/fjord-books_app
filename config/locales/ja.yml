@@ -220,6 +220,7 @@ ja:
       title_edit: "%{name}の編集"
       Sign up: "サインアップ"
       Log in: ログイン
+      Log out: ログアウト
       Users: ユーザー一覧
     devise:
       Cancel my account: アカウントの削除
