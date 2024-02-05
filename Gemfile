@@ -66,4 +66,3 @@ gem 'kaminari'
 
 gem 'devise', '~> 4.9'
 gem 'devise-i18n'
-gem 'wdm', '>= 0.1.0' if Gem.win_platform?

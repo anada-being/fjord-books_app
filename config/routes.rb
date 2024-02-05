@@ -1,7 +1,4 @@
 Rails.application.routes.draw do
-  get 'users/list'
-  get 'users/show'
-  patch 'users/edit'
   devise_for :users
   resources :books, :users
   mount LetterOpenerWeb::Engine, at: "/letter_opener" if Rails.env.development?
