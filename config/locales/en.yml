@@ -1,8 +1,12 @@
 ---
 en:
   activerecord:
-    models:
-      title: title
+    attributes:
+      book:
+        title: title
+        author: Author
+        memo: Memo
+        picture: Picture
   :title: title
   title: title
   Books: Books
