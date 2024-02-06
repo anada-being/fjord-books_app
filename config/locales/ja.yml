@@ -13,17 +13,15 @@ ja:
     destroy: 削除しました
   confirm:
     sure?: 消えてしまいますが、よろしいですか？
-  :title: タイトル
   title: タイトル
-  Books: 本
-  Author: 著者  #g
-  Memo: メモ  #g
-  Picture: 写真  #g
-  Title: タイトル  #g
-  Show: 詳細
-  Edit: 編集
-  Destroy: 消去
-  BooksApp: 本のアプリ
-  New Book: 新規作成
-  Editing Book: 編集
-  Back: 戻る
+  books: 本
+  author: 著者  #g
+  memo: メモ  #g
+  picture: 写真  #g
+  show: 詳細
+  edit: 編集
+  destroy: 消去
+  books_app: 本のアプリ
+  new_book: 新規作成
+  editing_book: 編集
+  back: 戻る

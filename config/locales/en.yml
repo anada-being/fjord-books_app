@@ -7,20 +7,19 @@ en:
         author: Author
         memo: Memo
         picture: Picture
-  :title: title
   title: title
-  Books: Books
-  Title: title
-  Author: Author
-  Memo: Memo
-  Picture: Picture
-  Show: Show
-  Edit: Edit
-  Destroy: Destroy
-  New Book: New Book
-  Editing Book: Editing Book
-  Back: Back
-  BooksApp: BooksApp
+  books: Books
+  title: title
+  author: Author
+  memo: Memo
+  picture: Picture
+  show: Show
+  edit: Edit
+  destroy: Destroy
+  new_book: New Book
+  editing_book: Editing Book
+  back: Back
+  books_app: BooksApp
   notice:
     create: Book was successfully created.
     update: Book was successfully updated.
