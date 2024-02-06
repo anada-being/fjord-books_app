@@ -1,5 +1,8 @@
 ---
 en:
+  activerecord:
+    models:
+      title: title
   :title: title
   title: title
   Books: Books
@@ -7,11 +10,9 @@ en:
   Author: Author
   Memo: Memo
   Picture: Picture
-  Title: title  
   Show: Show
   Edit: Edit
   Destroy: Destroy
-  BooksApp: BooksApp
   New Book: New Book
   Editing Book: Editing Book
   Back: Back

@@ -1,5 +1,8 @@
 ---
 ja:
+  activerecord:
+    models:
+      title: タイトル
   notice:
     create: 登録しました
     update: 登録しました
@@ -9,7 +12,6 @@ ja:
   :title: タイトル
   title: タイトル
   Books: 本
-  Title: タイトル
   Author: 著者  #g
   Memo: メモ  #g
   Picture: 写真  #g
