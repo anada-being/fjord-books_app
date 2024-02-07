@@ -20,9 +20,9 @@
         <td><%= book.memo %></td>
         <td><%= book.author %></td>
         <td><%= book.picture %></td>
-        <td><%= link_to t('show'), book %></td>
-        <td><%= link_to t('edit'), edit_book_path(book) %></td>
-        <td><%= link_to t('destroy'), book, method: :delete, data: { confirm: t('confirm.sure?') } %></td>
+        <td><%= link_to t('views.show'), book %></td>
+        <td><%= link_to t('views.edit'), edit_book_path(book) %></td>
+        <td><%= link_to t('views.destroy'), book, method: :delete, data: { confirm: t('confirm.sure?') } %></td>
       </tr>
     <% end %>
   </tbody>

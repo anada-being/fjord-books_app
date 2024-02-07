@@ -9,12 +9,14 @@ en:
         author: Author
         memo: Memo
         picture: Picture
-  show: Show
-  edit: Edit
-  destroy: Destroy
+  views:
+    show: Show
+    edit: Edit
+    destroy: Destroy
+    new: New
+    back: Back
   new_book: New Book
   editing_book: Editing Book
-  back: Back
   books_app: BooksApp
   notice:
     create: "%{name} was successfully created."
