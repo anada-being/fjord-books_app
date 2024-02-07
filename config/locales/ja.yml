@@ -2,7 +2,7 @@
 ja:
   activerecord:
     models:
-      book: 本一覧
+      book: 本
     attributes:
       book:
         title: タイトル
@@ -10,9 +10,9 @@ ja:
         memo: メモ
         picture: 写真
   notice:
-    create: 登録しました
-    update: 登録しました
-    destroy: 削除しました
+    create: "%{name}を登録しました"
+    update: "%{name}を登録しました"
+    destroy: "%{name}を削除しました"
   confirm:
     sure?: 消えてしまいますが、よろしいですか？
   show: 詳細

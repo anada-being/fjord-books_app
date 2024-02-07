@@ -17,8 +17,8 @@ en:
   back: Back
   books_app: BooksApp
   notice:
-    create: Book was successfully created.
-    update: Book was successfully updated.
-    destroy: Book was successfully destroyed.
+    create: "%{name} was successfully created."
+    update: "%{name} was successfully updated."
+    destroy: "%{name} was successfully destroyed."
   confirm:
     sure?: Are you sure?
