@@ -9,18 +9,20 @@ ja:
         author: 著者
         memo: メモ
         picture: 写真
-  notice:
-    create: "%{name}を登録しました"
-    update: "%{name}を登録しました"
-    destroy: "%{name}を削除しました"
-  confirm:
-    sure?: 消えてしまいますが、よろしいですか？
-  books_app: 本のアプリ
-  new_book: 新規作成
-  editing_book: 編集
   views:
     show: 詳細
     edit: 編集
     destroy: 削除
     new: 新規作成
     back: 戻る
+  titles:
+    app: "%{name}のアプリ"
+    new: "%{name}の新規作成"
+    edit: "%{name}の編集"
+  notice:
+    create: "%{name}を登録しました"
+    update: "%{name}を登録しました"
+    destroy: "%{name}を削除しました"
+  confirm:
+    sure?: 消えてしまいますが、よろしいですか？
+

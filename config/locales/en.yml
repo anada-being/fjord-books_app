@@ -2,10 +2,10 @@
 en:
   activerecord:
     models:
-      book: books
+      book: Books
     attributes:
       book:
-        title: title
+        title: Title
         author: Author
         memo: Memo
         picture: Picture
@@ -15,9 +15,10 @@ en:
     destroy: Destroy
     new: New
     back: Back
-  new_book: New Book
-  editing_book: Editing Book
-  books_app: BooksApp
+  titles:
+    new: New Book
+    editing: Editing Book
+    app: Books App
   notice:
     create: "%{name} was successfully created."
     update: "%{name} was successfully updated."
