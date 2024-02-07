@@ -1,6 +1,8 @@
 ---
 ja:
   activerecord:
+    models:
+      book: 本一覧
     attributes:
       book:
         title: タイトル
@@ -13,11 +15,6 @@ ja:
     destroy: 削除しました
   confirm:
     sure?: 消えてしまいますが、よろしいですか？
-  title: タイトル
-  books: 本
-  author: 著者  #g
-  memo: メモ  #g
-  picture: 写真  #g
   show: 詳細
   edit: 編集
   destroy: 消去
