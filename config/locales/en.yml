@@ -16,8 +16,8 @@ en:
     new: New
     back: Back
   titles:
-    new: New Book
-    editing: Editing Book
+    new: "New %{name}"
+    editing: "Editing %{name}"
     app: Books App
   notice:
     create: "%{name} was successfully created."
