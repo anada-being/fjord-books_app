@@ -1,0 +1,28 @@
+---
+ja:
+  activerecord:
+    models:
+      book: 本
+    attributes:
+      book:
+        title: タイトル
+        author: 著者
+        memo: メモ
+        picture: 写真
+  views:
+    show: 詳細
+    edit: 編集
+    destroy: 削除
+    new: 新規作成
+    back: 戻る
+  titles:
+    app: "本のアプリ"
+    new: "%{name}の新規作成"
+    edit: "%{name}の編集"
+  notice:
+    create: "%{name}を登録しました"
+    update: "%{name}を登録しました"
+    destroy: "%{name}を削除しました"
+  confirm:
+    sure?: 削除したあとは復旧できません。よろしいですか？
+
