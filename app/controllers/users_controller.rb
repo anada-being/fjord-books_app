@@ -2,7 +2,7 @@
 
 class UsersController < ApplicationController
   def index
-    @users = User.order(:id).includes(:avatar_blob).page(params[:page])
+    @users = User.with_attached_avatar.order(:id).page(params[:page])
   end
 
   def show
