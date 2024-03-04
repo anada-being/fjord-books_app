@@ -30,14 +30,14 @@
 <% end %>
 
 <p>
-  <a href="<%= following_user_path(@user) %>">
+  <a href="<%= user_followings_path(@user) %>">
     <strong><%= FollowRelationship.human_attribute_name(:following) %>:</strong>
     <%= @user.followings.count %>
   </a>
 </p>
 
 <p>
-  <a href="<%= followers_user_path(@user) %>">
+  <a href="<%= user_followers_path(@user) %>">
     <strong><%= FollowRelationship.human_attribute_name(:followers) %>:</strong>
     <%= @user.followers.count %>
   </a>
