@@ -2,9 +2,9 @@
 
 class FollowingsController < ApplicationController
   def show
-    @title = FollowRelationship.human_attribute_name(:following)
+    @title = t('followrelationship.followings')
     @user = User.find(params[:user_id])
-    @users = @user.followings.order(:id).page(params[:page])
+    @users = @user.followings.with_attached_avatar.order(:id).page(params[:page])
     render 'users/show_follow'
   end
 end
