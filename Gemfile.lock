@@ -60,9 +60,10 @@ GEM
       minitest (>= 5.1)
       tzinfo (~> 2.0)
       zeitwerk (~> 2.3)
-    addressable (2.8.0)
-      public_suffix (>= 2.0.2, < 5.0)
+    addressable (2.8.6)
+      public_suffix (>= 2.0.2, < 6.0)
     ast (2.4.2)
+    base64 (0.2.0)
     bcrypt (3.1.18)
     better_html (1.0.16)
       actionview (>= 4.0)
@@ -77,11 +78,11 @@ GEM
       msgpack (~> 1.2)
     builder (3.2.4)
     byebug (11.1.3)
-    capybara (3.37.1)
+    capybara (3.40.0)
       addressable
       matrix
       mini_mime (>= 0.1.3)
-      nokogiri (~> 1.8)
+      nokogiri (~> 1.11)
       rack (>= 1.6.0)
       rack-test (>= 0.6.3)
       regexp_parser (>= 1.5, < 3.0)
@@ -94,7 +95,6 @@ GEM
       marcel (~> 1.0.0)
       mini_mime (>= 0.1.3)
       ssrf_filter (~> 1.0)
-    childprocess (3.0.0)
     concurrent-ruby (1.1.10)
     crass (1.0.6)
     devise (4.8.1)
@@ -167,8 +167,8 @@ GEM
     matrix (0.4.2)
     method_source (1.0.0)
     mini_magick (4.11.0)
-    mini_mime (1.1.2)
-    mini_portile2 (2.8.0)
+    mini_mime (1.1.5)
+    mini_portile2 (2.8.5)
     minitest (5.16.2)
     msgpack (1.5.3)
     net-imap (0.2.3)
@@ -186,23 +186,23 @@ GEM
       net-protocol
       timeout
     nio4r (2.5.8)
-    nokogiri (1.13.6)
-      mini_portile2 (~> 2.8.0)
+    nokogiri (1.16.2)
+      mini_portile2 (~> 2.8.2)
       racc (~> 1.4)
     orm_adapter (0.5.0)
     parallel (1.22.1)
     parser (3.1.2.1)
       ast (~> 2.4.1)
-    public_suffix (4.0.7)
+    public_suffix (5.0.4)
     puma (5.6.4)
       nio4r (~> 2.0)
-    racc (1.6.0)
-    rack (2.2.4)
+    racc (1.7.3)
+    rack (2.2.8.1)
     rack-mini-profiler (2.3.4)
       rack (>= 1.2.0)
     rack-proxy (0.7.2)
       rack
-    rack-test (2.0.2)
+    rack-test (2.1.0)
       rack (>= 1.3)
     rails (6.1.6)
       actioncable (= 6.1.6)
@@ -235,11 +235,11 @@ GEM
     rb-fsevent (0.11.1)
     rb-inotify (0.10.1)
       ffi (~> 1.0)
-    regexp_parser (2.5.0)
+    regexp_parser (2.9.0)
     responders (3.0.1)
       actionpack (>= 5.0)
       railties (>= 5.0)
-    rexml (3.2.5)
+    rexml (3.2.6)
     rubocop (1.34.1)
       json (~> 2.3)
       parallel (~> 1.10)
@@ -276,9 +276,11 @@ GEM
       sprockets (> 3.0)
       sprockets-rails
       tilt
-    selenium-webdriver (3.142.7)
-      childprocess (>= 0.5, < 4.0)
-      rubyzip (>= 1.2.2)
+    selenium-webdriver (4.18.1)
+      base64 (~> 0.2)
+      rexml (~> 3.2, >= 3.2.5)
+      rubyzip (>= 1.2.2, < 3.0)
+      websocket (~> 1.0)
     semantic_range (3.0.0)
     smart_properties (1.17.0)
     spring (4.0.0)
@@ -305,15 +307,12 @@ GEM
       activemodel (>= 6.0.0)
       bindex (>= 0.4.0)
       railties (>= 6.0.0)
-    webdrivers (4.7.0)
-      nokogiri (~> 1.6)
-      rubyzip (>= 1.3.0)
-      selenium-webdriver (> 3.141, < 5.0)
     webpacker (5.4.3)
       activesupport (>= 5.2)
       rack-proxy (>= 0.6.1)
       railties (>= 5.2)
       semantic_range (>= 2.3.0)
+    websocket (1.2.10)
     websocket-driver (0.7.5)
       websocket-extensions (>= 0.1.0)
     websocket-extensions (0.1.5)
@@ -327,7 +326,7 @@ PLATFORMS
 DEPENDENCIES
   bootsnap (>= 1.4.4)
   byebug
-  capybara (>= 3.26)
+  capybara
   carrierwave
   devise
   devise-i18n
@@ -349,12 +348,11 @@ DEPENDENCIES
   rubocop-fjord
   rubocop-rails
   sass-rails (>= 6)
-  selenium-webdriver (< 4)
+  selenium-webdriver
   spring
   sqlite3 (~> 1.4)
   tzinfo-data
   web-console (>= 4.1.0)
-  webdrivers
   webpacker (~> 5.0)
 
 BUNDLED WITH
