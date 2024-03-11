@@ -5,7 +5,7 @@ require 'application_system_test_case'
 class BooksTest < ApplicationSystemTestCase
   setup do
     visit user_session_url
-    @book = books(:one)
+    @book = books(:cherrybook)
 
     fill_in 'Eメール', with: 'alice@example.com'
     fill_in 'パスワード', with: 'password'
