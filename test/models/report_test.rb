@@ -20,7 +20,7 @@ class ReportTest < ActiveSupport::TestCase
     assert nippo.editable?(me)
     assert_not Report.find(nippo_id).editable?(she)
 
-    assert_equal Date.today, nippo.created_on
+    assert_equal Time.Zone.today, nippo.created_on
 
     nippo.destroy
     assert_nil Report.find_by(id: nippo_id)
