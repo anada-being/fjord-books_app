@@ -28,18 +28,20 @@ class ReportsTest < ApplicationSystemTestCase
 
     assert_text '日報が作成されました。'
     click_on '戻る'
+    assert_text '今日の出来事'
   end
 
   test 'updating a Report' do
     visit reports_url
     click_on '編集', match: :prefer_exact
 
-    fill_in 'タイトル', with: '編集するよ'
     fill_in '内容', with: '変更しているよ'
+    fill_in 'タイトル', with: '更新した'
     click_on '更新'
 
     assert_text '日報が更新されました。'
     click_on '戻る'
+    assert_text '更新した'
   end
 
   test 'destroying a Report' do
