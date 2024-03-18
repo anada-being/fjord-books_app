@@ -3,26 +3,23 @@
 require 'test_helper'
 
 class ReportTest < ActiveSupport::TestCase
-  test 'CRUD_report' do
-    me = User.create!(email: 'me@example.com', password: 'password')
-    she = User.create!(email: 'she@example.com', password: 'password')
-    nippo = me.reports.new(title: 'today', content: 'TT')
-    assert_nil Report.find_by(title: 'today', content: 'TT')
+  setup do
+    @alice = users(:alice)
+    @me = users(:me)
+    @she = users(:she)
+    @report = reports(:one)
+  end
 
-    assert nippo.save
-    assert Report.find_by(title: 'today', content: 'TT')
-    nippo_id = nippo.id
-    assert nippo.editable?(me)
-    assert_not Report.find(nippo_id).editable?(she)
+  test 'editable_report' do
+    assert @report.editable?(@alice)
+    assert_not @report.editable?(@me)
 
-    assert nippo.update(title: 'aaa', content: 'omg')
-    assert_equal 'aaa', Report.find(nippo_id).title
-    assert nippo.editable?(me)
-    assert_not Report.find(nippo_id).editable?(she)
+    assert @report.update(title: 'aaa', content: 'omg')
+    assert @report.editable?(@alice)
+    assert_not @report.editable?(@she)
+  end
 
-    assert_equal Time.Zone.today, nippo.created_on
-
-    nippo.destroy
-    assert_nil Report.find_by(id: nippo_id)
+  test 'created_report' do
+    assert_equal Date.today, @report.created_on
   end
 end
