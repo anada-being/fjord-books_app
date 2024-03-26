@@ -10,6 +10,37 @@
   <%= @user.name %>
 </p>
 
+<% if current_user != @user %>
+  <% if current_user.following?(@user) %>
+    <%= form_with(url: follow_relationships_url,
+              html: { method: :delete },
+              remote: true) do |f| %>
+      <%= hidden_field_tag :followed_id, @user.id %>
+      <%= f.submit t('followrelationship.unfollow'), class: "btn" %>
+    <% end %>
+  <% else %>
+    <%= form_with(url: follow_relationships_url,
+                remote: true) do |f| %>
+      <%= hidden_field_tag :followed_id, @user.id %>
+      <%= f.submit t('followrelationship.follow'), class: "btn btn-primary" %>
+    <% end %>
+  <% end %>
+<% end %>
+
+<p>
+  <a href="<%= user_followings_path(@user) %>">
+    <strong><%= t('followrelationship.followings') %>:</strong>
+    <%= @user.followings.count %>
+  </a>
+</p>
+
+<p>
+  <a href="<%= user_followers_path(@user) %>">
+    <strong><%= t('followrelationship.followers') %>:</strong>
+    <%= @user.followers.count %>
+  </a>
+</p>
+
 <p>
   <strong><%= User.human_attribute_name(:postal_code) %>:</strong>
   <%= @user.postal_code %>

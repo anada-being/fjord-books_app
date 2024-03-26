@@ -3,5 +3,8 @@ Rails.application.routes.draw do
   devise_for :users
   root to: 'books#index'
   resources :books
-  resources :users, only: %i(index show)
+  resources :users, only: %i(index show) do
+    resource :followings, :followers
+  end
+  resource :follow_relationships, only: [:create, :destroy]
 end
