@@ -1,0 +1,24 @@
+<div class="comments-container">
+  <strong><%= Comment.model_name.human %>:</strong>
+  <% if (comments = commentable.comments.order(:id).includes(:user).presence) %>
+    <ul>
+      <% comments.each do |comment| %>
+        <li>
+          <%= comment.content %>
+          <small>
+            (<%= link_to comment.user.name_or_email, comment.user %> - <%= l comment.created_at, format: :short %>)
+            <% if comment.user == current_user %>
+              <%= button_to t('.delete'), [commentable, comment], method: :delete %>
+            <% end %>
+          </small>
+        </li>
+      <% end %>
+    </ul>
+  <% else %>
+    (<%= t('.no_comments') %>)
+  <% end %>
+  <%= form_with model: [commentable, commentable.comments.new], local: true do |f| %>
+    <%= f.text_field :content, required: true %>
+    <%= f.submit t('.create') %>
+  <% end %>
+</div>
