@@ -10,12 +10,12 @@ class ReportTest < ActiveSupport::TestCase
     @report = Report.create!(user: @me, title: 'mytest', content: 'today is cold' )
   end
 
-  test 'editable_report' do
+  test '#editable' do
     assert_not @report.editable?(@alice)
     assert @report.editable?(@me)
   end
 
-  test 'created_on' do
+  test '#created_on' do
     assert_equal Date.today, @report.created_on
   end
 end
